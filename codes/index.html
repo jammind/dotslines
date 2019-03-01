@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js webgl - lines - cubes - colors</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link href="styles.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+
+        <div id="panels">
+            <div id="panel_a" class="panel">
+                <div>Panel A</div>
+                <div class="gridContainer"></div>
+            </div>
+            <div id="panel_b" class="panel">
+                <div>Panel B</div>
+                <div class="gridContainer"></div>
+            </div>
+        </div>
+        <div id="viewer"></div>
+		<div id="info">
+            Project Lines by Jam Zhang<br>
+			Powered by <a href="http://threejs.org" target="_blank">three.js</a> 3D Library for WebGL
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/three.min.js"></script>
+
+		<script src="js/renderers/Projector.js"></script>
+		<script src="js/renderers/CanvasRenderer.js"></script>
+
+		<script src="js/Detector.js"></script>
+		<script src="js/libs/stats.min.js"></script>
+		<script src="js/geometries/hilbert2D.js"></script>
+        
+        <!-- Jam's code -->
+		<script src="lines.js"></script>
+		<script src="main.js"></script>
+        <!-- End of Jam's code -->
+
+		<script>
+            
+
+			if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+
+			var mouseX = 0, mouseY = 0,
+
+			windowHalfX = window.innerWidth / 2,
+			windowHalfY = window.innerHeight / 2,
+
+			camera, scene, renderer, material;
+
+			init();
+			animate();
+
+
+		</script>
+	</body>
+</html>
